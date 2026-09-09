@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.local
+data/vasp-store.json
+backend/data/vasp-store.json
+coverage/
