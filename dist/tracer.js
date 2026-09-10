@@ -22,7 +22,15 @@ export async function traceWallet(sourceAddress, dependencies = { getOutgoingTra
     const matches = [];
     let hiddenTransactions = 0;
     nodes.set(sourceAddress.toLowerCase(), { id: sourceAddress.toLowerCase(), address: sourceAddress, kind: 'source', label: 'Investigated wallet', depth: 0 });
+    const deadline = Date.now() + 45000;
+    let expanded = 0;
+    let truncated = false;
     while (queue.length) {
+        if (expanded >= 20 || Date.now() >= deadline) {
+            truncated = true;
+            break;
+        }
+        expanded++;
         const current = queue.shift();
         if (current.depth >= config.maxDepth)
             continue;
@@ -64,7 +72,7 @@ export async function traceWallet(sourceAddress, dependencies = { getOutgoingTra
         const breakdown = score(hops, valueShare, match.matchType);
         return { name: match.name, address: match.address, hops, valueWei: valueWei.toString(), valueShare, matchType: match.matchType, confidence: breakdown.confidence, label: confidenceLabel(breakdown.confidence), scoreBreakdown: { hopScore: breakdown.hopScore, valueScore: breakdown.valueScore, matchScore: breakdown.matchScore } };
     }).sort((a, b) => b.confidence - a.confidence);
-    return { sourceAddress, nodes: [...nodes.values()], edges, candidates, hiddenTransactions, explanation: deterministicExplanation(sourceAddress, candidates), cached: false };
+    return { truncated, sourceAddress, nodes: [...nodes.values()], edges, candidates, hiddenTransactions, explanation: deterministicExplanation(sourceAddress, candidates), cached: false };
 }
 export function deterministicExplanation(source, candidates) {
     if (!candidates.length)

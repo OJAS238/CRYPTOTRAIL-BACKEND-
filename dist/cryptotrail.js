@@ -31,6 +31,8 @@ export function toCryptoTrail(result, elapsedMs) {
         'Nodes show one connected path to the top-ranked candidate. rawTrace retains the full graph and all candidate evidence.',
         'The matched address is not independently classified as a deposit or hot wallet.'
     ];
+    if (result.truncated)
+        warnings.push('Partial trace: the wallet or time budget was reached. Additional paths remain unexplored.');
     if (result.demo)
         warnings.push('Illustrative demo data; not verified on-chain.');
     if (top && !found)

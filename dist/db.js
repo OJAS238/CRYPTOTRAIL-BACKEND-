@@ -25,6 +25,8 @@ export function getCachedTrace(address) {
     return result;
 }
 export function putCachedTrace(address, result) {
+    if (result.truncated)
+        return;
     const store = load();
     store.traces[address.toLowerCase()] = { ...result, cachedAt: Date.now() };
     save(store);

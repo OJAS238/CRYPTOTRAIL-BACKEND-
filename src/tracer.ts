@@ -27,7 +27,12 @@ export async function traceWallet(sourceAddress: string, dependencies = { getOut
   let hiddenTransactions = 0;
   nodes.set(sourceAddress.toLowerCase(), { id: sourceAddress.toLowerCase(), address: sourceAddress, kind: 'source', label: 'Investigated wallet', depth: 0 });
 
+  const deadline = Date.now() + 45000;
+  let expanded = 0;
+  let truncated = false;
   while (queue.length) {
+    if (expanded >= 20 || Date.now() >= deadline) { truncated = true; break; }
+    expanded++;
     const current = queue.shift()!;
     if (current.depth >= config.maxDepth) continue;
     const transactions = (await dependencies.getOutgoingTransactions(current.address)).filter(tx => tx.timestamp > current.timestamp);
@@ -67,7 +72,7 @@ export async function traceWallet(sourceAddress: string, dependencies = { getOut
     const breakdown = score(hops, valueShare, match.matchType);
     return { name: match.name, address: match.address, hops, valueWei: valueWei.toString(), valueShare, matchType: match.matchType, confidence: breakdown.confidence, label: confidenceLabel(breakdown.confidence), scoreBreakdown: { hopScore: breakdown.hopScore, valueScore: breakdown.valueScore, matchScore: breakdown.matchScore } };
   }).sort((a, b) => b.confidence - a.confidence);
-  return { sourceAddress, nodes: [...nodes.values()], edges, candidates, hiddenTransactions, explanation: deterministicExplanation(sourceAddress, candidates), cached: false };
+  return { truncated, sourceAddress, nodes: [...nodes.values()], edges, candidates, hiddenTransactions, explanation: deterministicExplanation(sourceAddress, candidates), cached: false };
 }
 
 export function deterministicExplanation(source: string, candidates: Candidate[]): string {
@@ -75,4 +80,5 @@ export function deterministicExplanation(source: string, candidates: Candidate[]
   const top = candidates[0];
   return `${shortAddress(source)} has a path to a known ${top.name} address in ${top.hops} hop${top.hops === 1 ? '' : 's'}. A bounded proportional allocation estimates ${(top.valueShare * 100).toFixed(1)}% of the source wallet's selected outgoing value, yielding ${top.label.toLowerCase()} heuristic confidence (${top.confidence}/100). Wallets are expanded once; converging paths may be undercounted and same-second transfers are excluded. This is an investigative lead, not proof of fund ownership or a probability.`;
 }
+
 

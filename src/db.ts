@@ -29,6 +29,7 @@ export function getCachedTrace(address: string): TraceResult | undefined {
 }
 
 export function putCachedTrace(address: string, result: TraceResult): void {
+  if (result.truncated) return;
   const store = load(); store.traces[address.toLowerCase()] = { ...result, cachedAt: Date.now() }; save(store);
 }
 
@@ -46,3 +47,4 @@ export function replaceVasps(rows: Array<{ address: string; name: string; source
   rows.forEach((row) => { store.vasps[row.address.toLowerCase()] = { ...row, verifiedAt: new Date().toISOString() }; });
   save(store);
 }
+

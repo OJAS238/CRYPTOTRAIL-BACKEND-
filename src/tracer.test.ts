@@ -36,3 +36,15 @@ describe('trace accounting', () => {
     expect(result.candidates[0]).toMatchObject({ valueWei: (2n * unit).toString(), valueShare: 1, confidence: 100 });
   });
 });
+
+it('bounds a branching trace and identifies the result as partial', async () => {
+  let counter = 100;
+  const result = await traceWallet(source, {
+    findVasp: () => undefined,
+    getOutgoingTransactions: async from => Array.from({length: 12}, () => ({
+      from, to: '0x' + (++counter).toString(16).padStart(40, '0'), hash: `branch-${counter}`, valueWei: unit, timestamp: counter
+    }))
+  });
+  expect(result.truncated).toBe(true);
+  expect(result.edges.length).toBe(240);
+});

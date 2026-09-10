@@ -45,6 +45,8 @@ export interface Candidate {
 }
 
 export interface TraceResult {
+  truncated?: boolean;
+
   demo?: boolean;
   summary?: { text: string; source: 'ai' | 'template'; reason?: string };
 
@@ -56,5 +58,6 @@ export interface TraceResult {
   explanation: string;
   cached: boolean;
 }
+
 
 

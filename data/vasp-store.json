@@ -184052,43 +184052,121 @@
       "cached": false
     },
     "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511": {
-      "sourceAddress": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+      "truncated": false,
+      "sourceAddress": "0xb5d85CBf7cB3EE0D56b3bB207D5Fc4B82f43F511",
       "nodes": [
         {
           "id": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
-          "address": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "address": "0xb5d85CBf7cB3EE0D56b3bB207D5Fc4B82f43F511",
           "kind": "source",
           "label": "Investigated wallet",
           "depth": 0
         },
         {
-          "id": "0x02466e547bfdab679fc49e96bbfc62b9747d997c",
-          "address": "0x02466e547bfdab679fc49e96bbfc62b9747d997c",
+          "id": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "address": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
           "kind": "vasp",
           "label": "Coinbase",
-          "vaspName": "Coinbase",
-          "depth": 1
+          "depth": 1,
+          "vaspName": "Coinbase"
         }
       ],
       "edges": [
         {
-          "id": "0xa7cba88bd0fe706f6f7d60968cf7d1796dd8c96ec294fdf290a8a03cecc0815b",
+          "id": "0x8cba05546872736692336faa124aff2debdb2869f07ae4a7e1dd5d41abbc0958",
           "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
-          "target": "0x02466e547bfdab679fc49e96bbfc62b9747d997c",
-          "hash": "0xa7cba88bd0fe706f6f7d60968cf7d1796dd8c96ec294fdf290a8a03cecc0815b",
-          "valueWei": "125000000000000000"
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x8cba05546872736692336faa124aff2debdb2869f07ae4a7e1dd5d41abbc0958",
+          "valueWei": "13228293061132064406192"
+        },
+        {
+          "id": "0x07b57cd3eba61db95dec3b28ce684d6f9828fd5405f3770ea2c333736ec8ee13",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x07b57cd3eba61db95dec3b28ce684d6f9828fd5405f3770ea2c333736ec8ee13",
+          "valueWei": "9452830228681960420236"
+        },
+        {
+          "id": "0xba378d3fcdeea08d74b6d5e35dd8f76a2bb2f3e84d75fd5a04e83662a3671e90",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xba378d3fcdeea08d74b6d5e35dd8f76a2bb2f3e84d75fd5a04e83662a3671e90",
+          "valueWei": "6670103255273526077958"
+        },
+        {
+          "id": "0xff7ec4ff7abdb2280be5383034ef9f8ee6c790361911eb88210da06a29c726c4",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xff7ec4ff7abdb2280be5383034ef9f8ee6c790361911eb88210da06a29c726c4",
+          "valueWei": "4965655663849532597303"
+        },
+        {
+          "id": "0x5bd5055a343abeebe0e0f0bf1e07667939c8a21ca846cd1e9cfd9bccffa0586a",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x5bd5055a343abeebe0e0f0bf1e07667939c8a21ca846cd1e9cfd9bccffa0586a",
+          "valueWei": "4017451767100346092173"
+        },
+        {
+          "id": "0x906f0d4f8827580a926fe5ef09337d3e87fcfd6003bb0b85eb2c802b6d1b7c23",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x906f0d4f8827580a926fe5ef09337d3e87fcfd6003bb0b85eb2c802b6d1b7c23",
+          "valueWei": "2953780571315694446543"
+        },
+        {
+          "id": "0xc47976d32e4ff2545b1149d7b36e61a58e83fdad7d47ea8a7adb7cde32fee7be",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xc47976d32e4ff2545b1149d7b36e61a58e83fdad7d47ea8a7adb7cde32fee7be",
+          "valueWei": "2557241797375491473357"
+        },
+        {
+          "id": "0xcb80c4838075d3795cea754cf08a022b586792a02bd4de844afad06f68938182",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xcb80c4838075d3795cea754cf08a022b586792a02bd4de844afad06f68938182",
+          "valueWei": "2518521752680229591378"
+        },
+        {
+          "id": "0xa5d1c3ebe6b1d3f92adf482758e57105c72fab13d109bb32d6e4ff7f05171ee0",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xa5d1c3ebe6b1d3f92adf482758e57105c72fab13d109bb32d6e4ff7f05171ee0",
+          "valueWei": "2512364029648873116790"
+        },
+        {
+          "id": "0x3af720c7540cd8948e0fd1d7be00c69500d678fcf41deb6658f3841c630010d1",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x3af720c7540cd8948e0fd1d7be00c69500d678fcf41deb6658f3841c630010d1",
+          "valueWei": "1355587049526715900850"
+        },
+        {
+          "id": "0x0e70a073aebcdb8ca6ab39c97e51dc889b61752f40d86b3cd21fdf550528c686",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0x0e70a073aebcdb8ca6ab39c97e51dc889b61752f40d86b3cd21fdf550528c686",
+          "valueWei": "1128268468866699854855"
+        },
+        {
+          "id": "0xecfeee0d09b9a004f347f1dfb0d3ebec2184c1e96c4efbe36d34ac97418c89f4",
+          "source": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511",
+          "target": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
+          "hash": "0xecfeee0d09b9a004f347f1dfb0d3ebec2184c1e96c4efbe36d34ac97418c89f4",
+          "valueWei": "650903352932965401258"
         }
       ],
       "candidates": [
         {
           "name": "Coinbase",
-          "address": "0x02466e547bfdab679fc49e96bbfc62b9747d997c",
+          "address": "0xA9D1e08C7793af67e9d92fe308d5697FB81d3E43",
+          "hops": 1,
+          "valueWei": "52011000998384099378893",
+          "valueShare": 1,
+          "matchType": "exact",
           "confidence": 100,
           "label": "High",
-          "valueShare": 1,
-          "valueWei": "125000000000000000",
-          "hops": 1,
-          "matchType": "exact",
           "scoreBreakdown": {
             "hopScore": 40,
             "valueScore": 40,
@@ -184096,10 +184174,14 @@
           }
         }
       ],
-      "hiddenTransactions": 0,
-      "explanation": "0xb5d8…f511 has a path to a known Coinbase address in 1 hop. A bounded proportional allocation estimates 100.0% of the source wallet's selected outgoing value, yielding high heuristic confidence (100/100). Wallets are expanded once; converging paths may be undercounted and same-second transfers are excluded. This is an investigative lead, not proof of fund ownership or a probability.",
-      "cached": true,
-      "cachedAt": 1789023245154
+      "hiddenTransactions": 66,
+      "explanation": "The source wallet sent a series of transfers that all landed in a Coinbase address, giving a single‑hop path with no intermediate wallets. The total value of those transfers matches the source amount exactly, so the match type is “exact” and the confidence is 100 %, labeled “High.” This is an investigative lead based on the path length, full value share, and exact match, but it does not prove that the funds were received or used by the Coinbase account.",
+      "cached": false,
+      "summary": {
+        "text": "The source wallet sent a series of transfers that all landed in a Coinbase address, giving a single‑hop path with no intermediate wallets. The total value of those transfers matches the source amount exactly, so the match type is “exact” and the confidence is 100 %, labeled “High.” This is an investigative lead based on the path length, full value share, and exact match, but it does not prove that the funds were received or used by the Coinbase account.",
+        "source": "ai"
+      },
+      "cachedAt": 1789055532047
     },
     "0x0000000000000000000000000000000000000002": {
       "sourceAddress": "0x0000000000000000000000000000000000000002",
@@ -184119,6 +184201,7 @@
       "cached": false
     },
     "0x4523462420065fd01e883f713a22df0876747fd5": {
+      "truncated": false,
       "sourceAddress": "0x4523462420065FD01E883f713A22DF0876747Fd5",
       "nodes": [
         {
@@ -184234,13 +184317,13 @@
         }
       ],
       "hiddenTransactions": 4,
-      "explanation": "The trace shows a single transfer (1 hop) from the source wallet directly to the Bitget exchange, with no intermediate wallets. The candidate match is Bitget, with a confidence score of 100 and a high label, based on the short path, the 99.33 % share of the value, and an exact match of the transaction details. This is an investigative lead, not proof, and the trace includes four hidden transactions that are not part of the matched path.",
+      "explanation": "The trace shows a single transfer from the source wallet to the Bitget exchange, with no intermediate wallets. The matched exchange is Bitget, with a confidence score of 100 and a label of High, based on the short path, the 99.33 % value share, and the exact match type. This is an investigative lead, not proof, and the trace includes four hidden transactions that were not detailed.",
       "cached": false,
       "summary": {
-        "text": "The trace shows a single transfer (1 hop) from the source wallet directly to the Bitget exchange, with no intermediate wallets. The candidate match is Bitget, with a confidence score of 100 and a high label, based on the short path, the 99.33 % share of the value, and an exact match of the transaction details. This is an investigative lead, not proof, and the trace includes four hidden transactions that are not part of the matched path.",
+        "text": "The trace shows a single transfer from the source wallet to the Bitget exchange, with no intermediate wallets. The matched exchange is Bitget, with a confidence score of 100 and a label of High, based on the short path, the 99.33 % value share, and the exact match type. This is an investigative lead, not proof, and the trace includes four hidden transactions that were not detailed.",
         "source": "ai"
       },
-      "cachedAt": 1789033830351
+      "cachedAt": 1789050964211
     },
     "0x8423a5c196b731d8ee412769cf5032a06db81924": {
       "sourceAddress": "0x8423a5c196B731D8Ee412769cf5032A06DB81924",
