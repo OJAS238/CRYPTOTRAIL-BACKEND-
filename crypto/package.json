@@ -1,0 +1,18 @@
+{
+  "name": "vasp-wallet-attribution",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "test": "npm run test -w backend",
+    "seed": "npm run seed -w backend",
+    "import-dataset": "npm run import-dataset -w backend",
+    "seed-demo": "npm run seed-demo -w backend",
+    "start": "npm run start -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
